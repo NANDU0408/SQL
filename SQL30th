@@ -1,0 +1,470 @@
+CREATE DATABASE Nandish_DB1;
+SHOW DATABASES;
+CREATE TABLE Car(id int,carName varchar(20), created_date timestamp);
+SELECT * from Car;
+ALTER TABLE Car add column(cost int);
+
+CREATE TABLE songs(song_name varchar(20), singer varchar(20), lyricist varchar(20), composer varchar(20), company varchar(20),
+gender varchar(20), duration long, movie varchar(20));
+SELECT * FROM songs;
+DESC songs;
+ALTER TABLE songs ADD COLUMN hero varchar(20);
+ALTER TABLE songs ADD COLUMN heroin varchar(20);
+
+CREATE TABLE food(food_name varchar(20), price bigint, spicy boolean, chef varchar(20), color varchar(20), food_type varchar(20),
+no_of_ingredients varchar(20), restaurant varchar(20));
+SELECT * FROM food;
+DESC food;
+ALTER TABLE food ADD COLUMN rating int;
+ALTER TABLE food ADD COLUMN region varchar(20);
+
+CREATE TABLE address(location_name varchar(20), area varchar(20), street varchar(20), door_number bigint, house_no bigint,
+pincode bigint,city varchar(20));
+SELECT * FROM address;
+DESC address;
+ALTER TABLE address ADD COLUMN state varchar(20);
+ALTER TABLE address ADD COLUMN country varchar(20);
+
+CREATE TABLE mobile(brand varchar(20), cost bigint, ram int, mobile_storage int, battery varchar(20), color varchar(20),
+version bigint, model varchar(20));
+SELECT * FROM mobile;
+DESC mobile;
+ALTER TABLE mobile ADD COLUMN region varchar(20);
+ALTER TABLE mobile ADD COLUMN display int;
+
+CREATE TABLE laptop(brand varchar(20), price bigint, warranty int, ram varchar(4), lap_storage varchar(10), graphic_card varchar(20),
+operating_system varchar(20), model_name varchar(20));
+SELECT * FROM laptop;
+DESC laptop;
+ALTER TABLE laptop ADD COLUMN color varchar(20);
+ALTER TABLE laptop ADD COLUMN processor varchar(20);
+
+
+CREATE TABLE college(college_name varchar(20), intake bigint, start_date timestamp, no_of_depts bigint, familar_dept varchar(15), principal varchar(10), dean varchar(10), no_of_hod bigint, no_of_classrooms bigint, location varchar(30));
+INSERT INTO college VALUES ('SDM',450,10,'CSE','RAM','Vijay',10,51,'Dharwad','1967-08-04');
+INSERT INTO college VALUES ('BVB',500,11,'CSE','Vikas','Arjun',11,58,'Dharwad','1961-08-04');
+INSERT INTO college VALUES ('RV',550,10,'CSE','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO college VALUES ('BMS',550,10,'CSE','RAJ','VIKAS',10,59,'Bangalore','1959-08-04');
+INSERT INTO college VALUES ('DS',600,14,'ECE','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO college VALUES ('SV',550,10,'MECH','AJAY','VIJAY',10,59,'Mangalore','1959-08-04');
+INSERT INTO college VALUES ('JAY',800,8,'CIVIL','AJAY','VIKAS',10,59,'Bangalore','1969-08-04');
+INSERT INTO college VALUES ('ARV',550,10,'CSE','Vijay','Ram',10,59,'Bangalore','1971-08-04');
+INSERT INTO college VALUES ('KLE',550,10,'CSE','Vijay','Ram',10,59,'Hubli','1984-08-04');
+INSERT INTO college VALUES ('RVDT',900,10,'ECE','Abhishek','Vani',10,59,'Belgaum','1978-08-04');
+SELECT * FROM college;
+ALTER TABLE college
+DROP COLUMN start_date;
+ALTER TABLE college
+ADD start_date DATE;
+
+CREATE TABLE company(company_name varchar(20), intake bigint, start_date timestamp, no_of_depts bigint, familar_dept varchar(15), owner varchar(10), ceo varchar(10), no_of_supervisors bigint, no_of_machines bigint, location varchar(30));
+INSERT INTO company VALUES ('SRS',450,10,'CSE','RAM','Vijay',10,51,'Dharwad','1967-08-04');
+INSERT INTO company VALUES ('RNS',500,11,'CSE','Vikas','Arjun',11,58,'Dharwad','1961-08-04');
+INSERT INTO company VALUES ('VKS',550,10,'CSE','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO company VALUES ('RMS',550,10,'CSE','RAJ','VIKAS',10,59,'Bangalore','1959-08-04');
+INSERT INTO company VALUES ('Diwakar',600,14,'ECE','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO company VALUES ('Consultant',550,10,'MECH','AJAY','VIJAY',10,59,'Mangalore','1959-08-04');
+INSERT INTO company VALUES ('VMS',800,8,'CIVIL','AJAY','VIKAS',10,59,'Bangalore','1969-08-04');
+INSERT INTO company VALUES ('AANS',550,10,'CSE','Vijay','Ram',10,59,'Bangalore','1971-08-04');
+INSERT INTO company VALUES ('RNW',550,10,'CSE','Vijay','Ram',10,59,'Hubli','1984-08-04');
+INSERT INTO company VALUES ('SVMN',900,10,'ECE','Abhishek','Vani',10,59,'Belgaum','1978-08-04');
+SELECT * from company;
+ALTER TABLE company
+DROP COLUMN start_date;
+ALTER TABLE company
+ADD start_date DATE;
+
+CREATE TABLE shoppingMall(mall_name varchar(20), entrance_gates bigint, start_date timestamp, no_of_shops bigint, gameZone_name varchar(15), chairman varchar(10), manager varchar(10), no_of_gaurds bigint, no_of_floors bigint, location varchar(30));  
+INSERT INTO shoppingMall VALUES ('AKS',450,10,'CSE','RAM','Vijay',10,51,'Dharwad','2010-08-04');
+INSERT INTO shoppingMall VALUES ('OCEAN',500,11,'CSE','Vikas','Arjun',11,58,'Dharwad','2016-08-04');
+INSERT INTO shoppingMall VALUES ('ORIAN',550,10,'CSE','Vijay','Ram',10,59,'Bangalore','2008-08-04');
+INSERT INTO shoppingMall VALUES ('MANTRI',550,10,'CSE','RAJ','VIKAS',10,59,'Bangalore','2019-08-04');
+INSERT INTO shoppingMall VALUES ('LAKSHMI',600,14,'ECE','Vijay','Ram',10,59,'Bangalore','2011-08-04');
+INSERT INTO shoppingMall VALUES ('GOPALAN',550,10,'MECH','AJAY','VIJAY',10,59,'Mangalore','2007-08-04');
+INSERT INTO shoppingMall VALUES ('VEGECITY',800,8,'CIVIL','AJAY','VIKAS',10,59,'Bangalore','2006-08-04');
+INSERT INTO shoppingMall VALUES ('SQUARE',550,10,'CSE','Vijay','Ram',10,59,'Bangalore','2000-08-04');
+INSERT INTO shoppingMall VALUES ('UV',550,10,'CSE','Vijay','Ram',10,59,'Hubli','2019-08-04');
+INSERT INTO shoppingMall VALUES ('NN',900,10,'ECE','Abhishek','Vani',10,59,'Belgaum','2022-08-04');
+SELECT * from shoppingMall;
+ALTER TABLE shoppingMall
+DROP COLUMN start_date;
+ALTER TABLE shoppingMall
+ADD start_date DATE;
+
+CREATE TABLE govt_dept(dept_name varchar(20), dept_profit bigint, start_date timestamp, no_of_sections bigint, senior_section varchar(15), chief varchar(10), Asst_Chief varchar(10), no_of_workers bigint, no_of_projects bigint, location varchar(30));
+INSERT INTO govt_dept VALUES ('GHJ',450,10,'Accounts','RAM','Vijay',10,51,'Dharwad','1967-08-04');
+INSERT INTO govt_dept VALUES ('GKU',500,11,'Security','Vikas','Arjun',11,58,'Dharwad','1961-08-04');
+INSERT INTO govt_dept VALUES ('JUI',550,10,'HR','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO govt_dept VALUES ('UHJ',550,10,'HR','RAJ','VIKAS',10,59,'Bangalore','1959-08-04');
+INSERT INTO govt_dept VALUES ('HIJ',600,14,'Accounts','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO govt_dept VALUES ('GUG',550,10,'Security','AJAY','VIJAY',10,59,'Mangalore','1959-08-04');
+INSERT INTO govt_dept VALUES ('DHJC',800,8,'Dept_Head','AJAY','VIKAS',10,59,'Bangalore','1969-08-04');
+INSERT INTO govt_dept VALUES ('OUH',550,10,'HR','Vijay','Ram',10,59,'Bangalore','1971-08-04');
+INSERT INTO govt_dept VALUES ('UIJ',550,10,'Sales','Vijay','Ram',10,59,'Hubli','1984-08-04');
+INSERT INTO govt_dept VALUES ('GHUIU',900,10,'Accounts','Abhishek','Vani',10,59,'Belgaum','1978-08-04');
+SELECT * from govt_dept;
+ALTER TABLE govt_dept
+DROP COLUMN start_date;
+ALTER TABLE govt_dept
+ADD start_date DATE;
+
+CREATE TABLE temple(temple_name varchar(20), distance bigint, fair_date timestamp, no_of_hundis bigint, temple_old_name varchar(15), darmadhikari varchar(10), chief_poojari varchar(10), no_of_gaurds bigint, no_of_helpers bigint, location varchar(30));
+INSERT INTO temple VALUES ('SHIVA',450,10,'HARIHAR','RAM','Vijay',10,51,'Dharwad','1967-08-04');
+INSERT INTO temple VALUES ('VISHNU',500,11,'ANAND','Vikas','Arjun',11,58,'Dharwad','1961-08-04');
+INSERT INTO temple VALUES ('LAKSHMINARASHIMA','500',10,'PREMMANDIR','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO temple VALUES ('GANESH',550,10,'GAJANAN','RAJ','VIKAS',10,59,'Bangalore','1959-08-04');
+INSERT INTO temple VALUES ('RAMSITA',600,14,'SIYARAM','Vijay','Ram',10,59,'Bangalore','1959-08-04');
+INSERT INTO temple VALUES ('HANUMAN',550,10,'MARUTI','AJAY','VIJAY',10,59,'Mangalore','1959-08-04');
+INSERT INTO temple VALUES ('SUBRAMANYA',800,8,'SKANDA','AJAY','VIKAS',10,59,'Bangalore','1969-08-04');
+INSERT INTO temple VALUES ('SHANI',550,10,'CSE','SHANI','Ram',10,59,'Bangalore','1971-08-04');
+INSERT INTO temple VALUES ('PARASHURAM',550,10,'PARASHU','Vijay','Ram',10,59,'Hubli','1984-08-04');
+INSERT INTO temple VALUES ('SARASWATI',900,10,'GEETA','Abhishek','Vani',10,59,'Belgaum','1978-08-04');
+SELECT * from temple;
+ALTER TABLE temple
+DROP COLUMN fair_date;
+ALTER TABLE temple
+ADD fair_date DATE;
+ALTER TABLE temple
+DROP COLUMN fair_date;
+ALTER TABLE temple
+ADD fair_date DATE;
+
+ALTER TABLE temple MODIFY distance double;
+ALTER TABLE temple ADD COLUMN CITY varchar(10);
+ALTER TABLE temple ADD COLUMN Entry timestamp;
+UPDATE  temple SET temple_old_name='VIJAY' WHERE temple_name='SHIVA';
+
+CREATE TABLE OLYMPIC_GAMES(ID int, Game varchar(20), olympic_date date, organizedCountry varchar(20), wonCountry varchar(20), medal varchar(10), budget double, expenses double, flag_honour varchar(20), fire_honour varchar(20));
+SELECT * FROM OLYMPIC_GAMES;
+
+INSERT INTO OLYMPIC_GAMES VALUES(1,'Archery', '2011-08-04', 'Argentina', 'Japan', 'Gold', 80000000, 75000000, 'Japan', 'Argentina');
+INSERT INTO OLYMPIC_GAMES VALUES(2, 'Shooting', '2014-07-12','Japan','China', 'Gold', 70000000, 69000000, 'Argentina', 'Japan');
+INSERT INTO OLYMPIC_GAMES VALUES(3, 'Relay', '2016-05-01', 'China', 'China', 'Silver',900000000, 870000000, 'China', 'China');
+INSERT INTO OLYMPIC_GAMES VALUES(4, 'shortPut', '2019-09-13', 'SouthKorea', 'Japan', 'Silver', 1100000000, 100000000, 'China', 'SouthKorea');
+INSERT INTO OLYMPIC_GAMES VALUES(5, 'halfRelay','2023-05-05', 'India', 'Japan', 'Gold', 4000000000, 3500000000, 'Japan', 'India');
+INSERT INTO OLYMPIC_GAMES VALUES(6, 'JawlinThrow', '2000-09-25', 'USA', 'Argentina', 'Silver', 76000000, 56000000, 'Japan', 'USA');
+INSERT INTO OLYMPIC_GAMES VALUES(7, '100m', '2009-06-25', 'Australia', 'Japan', 'Gold', 769000000, 590000000, 'Argentina', 'Australia');
+INSERT INTO OLYMPIC_GAMES VALUES(8, '200m', '2006-09-25', 'USA', 'India', 'Gold', 790000000, 5698000000, 'Japan', 'USA');
+INSERT INTO OLYMPIC_GAMES VALUES(9, 'Boxing', '2001-09-28', 'India', 'India', 'Gold', 790000000, 568000000, 'India', 'India');
+INSERT INTO OLYMPIC_GAMES VALUES(10, 'Fencing', '2006-09-25', 'China', 'China', 'Gold', 7600000000, 5600000000, 'India', 'China');
+INSERT INTO OLYMPIC_GAMES VALUES(11, 'Judo', '2009-09-25', 'China', 'Japan', 'Silver', 8700000000, 560080000, 'China', 'China');
+INSERT INTO OLYMPIC_GAMES VALUES(12, 'WeightLifting', '2012-09-25', 'Japan', 'India', 'Gold', 9800000000, 5607800000, 'Japan', 'Japan');
+INSERT INTO OLYMPIC_GAMES VALUES(13, 'Diving', '2016-09-15', 'USA', 'USA', 'Gold', 7600890000, 5600099000, 'India', 'USA');
+INSERT INTO OLYMPIC_GAMES VALUES(14, 'Golf', '2018-12-25', 'China', 'UK', 'Gold', 76000902000, 56082900000, 'USA', 'China');
+INSERT INTO OLYMPIC_GAMES VALUES(15, 'Tae_Kown_Do', '2010-11-05', 'Australia', 'China', 'Silver', 7600890000, 5600770000, 'UK', 'Australia');
+INSERT INTO OLYMPIC_GAMES VALUES(16, 'Athletics', '2021-05-25', 'Argentina', 'China', 'Gold', 7600089000, 5634000000, 'China', 'Argentina');
+INSERT INTO OLYMPIC_GAMES VALUES(17, 'Lacrosse', '2011-10-2', 'UK', 'USA', 'Silver', 7607300000, 5600820000, 'China', 'UK');
+INSERT INTO OLYMPIC_GAMES VALUES(18, 'Gymnastics', '2010-09-25', 'SouthAfrica', 'India', 'Gold', 7608900000, 5600091000, 'USA', 'SouthAfrica');
+INSERT INTO OLYMPIC_GAMES VALUES(19, 'TableTenis', '1999-07-12', 'India', 'India', 'Gold', 76089900000, 56000787000, 'India', 'India');
+INSERT INTO OLYMPIC_GAMES VALUES(20, 'Tennis', '1997-08-4', 'India', 'India', 'Gold', 76089900000, 56000787000, 'India', 'India');
+
+SELECT * FROM OLYMPIC_GAMES WHERE Game= 'JawlinThrow' AND medal= 'Silver';
+SELECT * FROM OLYMPIC_GAMES WHERE Game='Japan' OR wonCountry ='India';
+SELECT * FROM OLYMPIC_GAMES WHERE Game IN('Shooting','Relay','Boxing');
+SELECT * FROM OLYMPIC_GAMES WHERE organizedCountry NOT IN('India','Argentina','Japan');
+SELECT * FROM OLYMPIC_GAMES WHERE ID BETWEEN 2 AND 10;
+SELECT * FROM OLYMPIC_GAMES WHERE ID NOT BETWEEN 5 AND 15;
+SELECT * FROM OLYMPIC_GAMES WHERE wonCountry LIKE 'A%';
+SELECT * FROM OLYMPIC_GAMES WHERE organizedCountry LIKE 'U%A';
+SELECT * FROM OLYMPIC_GAMES WHERE wonCountry LIKE 'A%N%A';
+SELECT * FROM OLYMPIC_GAMES ORDER BY olympic_date;
+SELECT * FROM OLYMPIC_GAMES ORDER BY budget;
+SELECT * FROM OLYMPIC_GAMES ORDER BY expenses;
+SELECT DISTINCT(Game) FROM OLYMPIC_GAMES;
+SELECT INSTR('India','a');
+SELECT SUBSTR('Argentina',7,6);
+SELECT INSTR(Game,'a') AS data FROM OLYMPIC_GAMES;
+
+CREATE TABLE AIRLINES(ID int, airlinesName varchar(20), ownerName varchar(20), ceo varchar(20), noOfPlanes double, noOfPilots double, investedAmount double, yearlyprofit double, startedDate date, airlinesLocation varchar(20));
+SELECT * FROM AIRLINES;
+INSERT INTO AIRLINES VALUES(1, 'AirIndia', 'Ratan_Tata', 'Ratan_Tata', 21, 29, 76089900000, 5600078700098, '1941-08-15','India');
+INSERT INTO AIRLINES VALUES(2, 'AirAsia', 'Govt', 'Anil', 31, 49, 86089900000, 8600078700098, '1949-08-15','India');
+INSERT INTO AIRLINES VALUES(3, 'Indigo', 'Govt', 'Anuj', 21, 29, 76089900000, 5600078700098, '1941-08-15','India');
+INSERT INTO AIRLINES VALUES(4, 'Delta', 'Yun', 'Yan', 83, 76, 76089900000, 5600078700098, '2000-08-15','America');
+INSERT INTO AIRLINES VALUES(5, 'SouthWest', 'Uaj', 'Yjna', 78, 66, 76089900000, 5600078700098, '2010-08-15','Australia');
+INSERT INTO AIRLINES VALUES(7, 'Aerilineas_Argentina', 'Yhag', 'Rahj', 29, 22, 76089900000, 5600078700098, '2001-08-15','Argentina');
+INSERT INTO AIRLINES VALUES(8, 'AgeanAirlines', 'Yhjaj', 'Rhvak', 91, 87, 76089900000, 5600078700098, '2004-08-15','Singapore');
+INSERT INTO AIRLINES VALUES(9, 'AirArabia', 'Tiuah', 'Pajak', 72, 67, 76089900000, 5600078700098, '2008-08-15','SaudiArabia');
+INSERT INTO AIRLINES VALUES(10, 'JetBlue', 'Tgavj', 'Fhab', 65, 58, 76089900000, 5600078700098, '2009-08-15','USA');
+INSERT INTO AIRLINES VALUES(11, 'AllegentAir', 'Rgasv', 'Dgag', 97, 89, 76089900000, 5600078700098, '1987-08-15','Russia');
+INSERT INTO AIRLINES VALUES(12, 'Vistara', 'Gjagh', 'Gahagh', 98, 55, 76089900000, 5600078700098, '1985-08-15','Thailand');
+INSERT INTO AIRLINES VALUES(13, 'AirNewZealand', 'Gjasgb', 'Gjag', 56, 51, 76089900000, 5600078700098, '2003-08-15','Newzealand');
+INSERT INTO AIRLINES VALUES(14, 'SpiritAirlines', 'YUG', 'Habn', 47, 44, 76089900000, 5600078700098, '2011-08-15','Russia');
+INSERT INTO AIRLINES VALUES(15, 'BreezeAirways', 'Hjsagh', 'Dhafh', 46, 44, 76089900000, 5600078700098, '2007-08-15','Brazil');
+INSERT INTO AIRLINES VALUES(16, 'AirAstana', 'Ghavh', 'Oahhah', 87, 77, 76089900000, 5600078700098, '2009-08-15','Bali');
+INSERT INTO AIRLINES VALUES(17, 'AllianceAir', 'Ybanxhg', 'Thabha', 97, 94, 76089900000, 5600078700098, '2016-08-15','UK');
+INSERT INTO AIRLINES VALUES(18, 'OmanAir', 'Hhahjh', 'Gjag', 98, 81, 76089900000, 5600078700098, '2018-08-15','China');
+INSERT INTO AIRLINES VALUES(19, 'Emirites', 'Thag', 'Hjsha', 99, 97, 76089900000, 5600078700098, '2019-08-15','SaudiArabia');
+INSERT INTO AIRLINES VALUES(20, 'FrontierAirlines', 'Yhahgh', 'Yag', 141, 128, 76089900000, 5600078700098, '2000-08-15','Japan');
+
+SELECT * FROM AIRLINES WHERE airlinesName= 'AirIndia' AND ceo= 'Ratan_Tata';
+SELECT * FROM AIRLINES WHERE ownerName='Govt' OR ceo ='Anuj';
+SELECT * FROM AIRLINES WHERE airlinesLocation IN('India','Argentina','Japan');
+SELECT * FROM AIRLINES WHERE airlinesLocation NOT IN('India','Argentina','Japan');
+SELECT * FROM AIRLINES WHERE noOfPlanes BETWEEN 20 AND 100;
+SELECT * FROM AIRLINES WHERE noOfPlanes NOT BETWEEN 2 AND 50;
+SELECT * FROM AIRLINES WHERE airlinesName LIKE 'S%';
+SELECT * FROM AIRLINES WHERE airlinesName LIKE 'J%E';
+SELECT * FROM AIRLINES WHERE airlinesName LIKE 'A%N%A';
+SELECT * FROM AIRLINES ORDER BY ownerName;
+SELECT DISTINCT(airlinesName) FROM Airlines;
+SELECT INSTR('India','a');
+SELECT SUBSTR('Argentina',7,6);
+SELECT INSTR(airlinesName,'a') AS data FROM Airlines;
+
+CREATE TABLE Olympic_Games1(id int,name varchar(20),sport varchar(20),year bigint,country varchar(20),
+  gender varchar(20),age int,olympic_city varchar(20),country_code varchar(20),medal varchar(10));
+INSERT INTO Olympic_Games1 values(1,"chetan","running",2013,"india","male",23,"tokyo","ind","gold");
+INSERT INTO Olympic_Games1 values(2,"manu","shotput",2014,"china","male",26,"tokyo","chi","bronze");
+INSERT INTO Olympic_Games1 values(3,"prajwal","swimming",2016,"srilanka","male",24,"London","sl","silver");
+INSERT INTO Olympic_Games1 values(4,"Harish","javalin",2015,"Bangladesh","male",25,"Paris","ban","bronze");
+INSERT INTO Olympic_Games1 values(5,"Sumit","Badminton",2016,"England","male",26,"Paris","Eng","bronze");
+INSERT INTO Olympic_Games1 values(6,"Naveen","Boxing",2017,"pakistan","male",27,"Tokyo","pak","Gold");
+INSERT INTO Olympic_Games1 values(7,"Deepthi","Diving",2016,"Japan","Female",23,"Tokyo","Jap","Gold");
+INSERT INTO Olympic_Games1 values(8,"Brunda","Cycling",2015," Bermuda","Female",25,"Tokyo","Ber","Bronze");
+INSERT INTO Olympic_Games1 values(9,"Archana","Shooting",2016," Bhutan","Female",26,"Tokyo","Bhu","Gold");
+INSERT INTO Olympic_Games1 values(10,"Raju","Karate",2017," Brazil","Male",27,"Paris","Bra","Silver");
+INSERT INTO Olympic_Games1 values(11,"Kiran","Rugby",2016," Bulgaria","Male",26,"Paris","Bul","Gold");
+INSERT INTO Olympic_Games1 values(12,"Madhu","Snowboarding",2017,"  Canada","Male",26,"Landon","Can","Silver");
+INSERT INTO Olympic_Games1 values(13,"Shivu","Tug of War",2018,"  Colombia","Male",28,"Landon","Col","Gold"); 
+INSERT INTO Olympic_Games1 values(14,"Sahana","Fencing",2017,"Cuba","Female",23,"Tokyo","Cub","Gold"); 
+INSERT INTO Olympic_Games1 values(15,"Puja","Judo",2016,"Denmark","Female",28,"Tokyo","Den","Silver"); 
+INSERT INTO Olympic_Games1 values(16,"Sneha","Archery",2017,"France","Female",25,"Tokyo","Fra","Bronze"); 
+INSERT INTO Olympic_Games1 values(17,"Pavan","Biathlon",2018,"Germany","Male",27,"Tokyo","Ger","Gold"); 
+INSERT INTO Olympic_Games1 values(18,"Satya","Weightlifting",2017,"Greece","Male",26,"Landon","Gre","Silver"); 
+INSERT INTO Olympic_Games1 values(19,"Prakash","Water polo",2022,"Grenada","Male",26,"Landon","Grn","Gold"); 
+INSERT INTO Olympic_Games1 values(20,"keerthi","Shooting",2019,"india","Female",23,"Landon","ind","Gold"); 
+
+SELECT * FROM olympic_Games1 WHERE id=5 AND gender="male";
+SELECT * FROM Olympic_Games1 WHERE sport="running" OR medal="gold";
+SELECT * FROM Olympic_Games1 WHERE id IN(1,7,14,20);
+SELECT * FROM Olympic_Games1 WHERE gender NOT IN("male");
+SELECT * FROM Olympic_Games1 WHERE age BETWEEN 23 AND 25;
+SELECT * FROM Olympic_Games1 WHERE age NOT BETWEEN 24 AND 27;
+SELECT * FROM Olympic_Games1 WHERE sport LIKE 'd%';
+SELECT * FROM Olympic_Games1 WHERE country LIKE '%a';
+SELECT * FROM Olympic_Games1 ORDER BY name;
+SELECT * FROM Olympic_Games1 ORDER BY age desc;
+SELECT DISTINCT(country),name FROM Olympic_Games1;
+SELECT olympic_city,INSTR(olympic_city,'o') FROM Olympic_Games1;
+SELECT olympic_city,INSTR(olympic_city,'o') AS position FROM Olympic_Games1;
+SELECT name,SUBSTR(sport,2,4) FROM Olympic_Games1;
+
+CREATE TABLE Airlines1(id int,Plane_name varchar(20),Plane_Date varchar(20),Origin varchar(20),Destination varchar(20),
+  Departure_time varchar(20),Landing_time varchar(20),No_of_seats bigint,No_of_passengers bigint,Price bigint);
+
+  INSERT INTO Airlines1 values(1,'Indigo','15-10-2023','Bangalore','Mumbai','11:30am','02:45pm',500,423,2500);
+  INSERT INTO Airlines1 values(2,'Air india','18-10-2023','Bangalore','Channai','10:30am','12:45pm',550,454,3000);
+  INSERT INTO Airlines1 values(3,'Spicejet','20-10-2023','Mumbai','Channai','01:30pm','04:45pm',400,378,3500);
+  INSERT INTO Airlines1 values(4,'Air india express','21-10-2023','Pune','Channai','10:30pm','12:45am',600,530,3000);
+  INSERT INTO Airlines1 values(5,'Vistara','11-10-2023','Kolkata','Delhi','11:30am','03:45pm',500,430,2500);
+  INSERT INTO Airlines1 values(6,'Qatar airways','15-10-2023','Mumbai','Landon','11:30am','02:45am',500,330,5000);
+  INSERT INTO Airlines1 values(7,'Saudia','21-10-2023','Mumbai','Ranchi','11:30am','01:45pm',550,500,3500);
+  INSERT INTO Airlines1 values(8,'Emirates','17-10-2023','Pune','Bangalore','12:30pm','04:45pm',600,543,3000);
+  INSERT INTO Airlines1 values(9,'Bonza','20-10-2023','Jaipur','Hydrabad','11:30pm','02:45pm',500,451,3500);
+  INSERT INTO Airlines1 values(10,'BH air','22-10-2023','Patna','Srinagar','10:30pm','03:45pm',500,351,5000);
+  INSERT INTO Airlines1 values(11,'Daily air','11-10-2023','Mohali','Mumbai','10:00am','12:45pm',500,231,4000);
+  INSERT INTO Airlines1 values(12,'DOT LT','01-10-2023','Channai','Mumbai','10:00am','11:45pm',500,450,3600);
+  INSERT INTO Airlines1 values(13,'Nam Air','07-10-2023','Vishakapatam','kolkata','11:00am','12:45pm',550,450,5500);
+  INSERT INTO Airlines1 values(14,'Naysa','09-10-2023','Pune','Hubali','10:00am','12:45pm',500,400,3000);
+  INSERT INTO Airlines1 values(15,'Neos','10-10-2023','Hydrabad','Bangalore','11:00am','01:35pm',550,450,3600);
+  INSERT INTO Airlines1 values(16,'Nepal airlines','11-10-2023','Katmandu','Bangalore','10:00am','04:35pm',500,350,8000);
+  INSERT INTO Airlines1 values(17,'Nile air','16-10-2023','Bihar','Bangalore','11:00am','01:35pm',600,550,4000);
+  INSERT INTO Airlines1 values(18,'Taca','12-10-2023','Kolkata','Bangalore','12:00am','03:35am',500,432,4500);
+  INSERT INTO Airlines1 values(19,'Malaysia airlines','15-10-2023','Dubai','Bangalore','12:00am','05:35am',500,472,10000);
+  INSERT INTO Airlines1 values(20,'Manta air','18-10-2023','Abu dabi','Bangalore','12:00am','06:35am',500,372,12000);
+
+  SELECT * FROM Airlines1;
+  SELECT * FROM Airlines1 WHERE id=2 AND destination="delhi";
+SELECT * FROM Airlines1 WHERE origin="banglore" OR no_of_seats=500;
+SELECT * FROM Airlines1 WHERE id IN(12,4,8,20);
+SELECT * FROM Airlines1 WHERE plane_name NOT IN('vistara');
+SELECT * FROM Airlines1 WHERE id BETWEEN 3 AND 15;
+SELECT * FROM Airlines1 WHERE id NOT BETWEEN 6 AND 18;
+SELECT * FROM Airlines1 WHERE origin LIKE 'b%';
+SELECT * FROM Airlines1 WHERE origin LIKE '%i';
+SELECT * FROM Airlines1 ORDER BY plane_name;
+SELECT * FROM Airlines1 ORDER BY no_of_seats desc;
+SELECT DISTINCT(origin),plane_name FROM Airlines1;
+SELECT plane_name,INSTR(plane_name,'i') FROM Airlines1;
+SELECT plane_name,INSTR(plane_name,'o') AS position FROM Airlines1;
+SELECT plane_name,SUBSTR(destination,3,7) FROM Airlines1;
+
+
+
+SELECT * FROM Airlines1;  
+
+ SELECT plane_name,LENGTH(plane_name) as length from Airlines1;
+
+  UPPER:
+
+  SELECT UPPER(plane_name) from Airlines1;
+ LOWER:
+
+ SELECT LOWER(plane_name) from Airlines1;
+ LIKE, UPPER,LOWER, LENGTH, INSTR, SUBSTR, LTRIM,RTRIM,LPAD,RPAD
+ CONCAT: 
+
+SELECT * FROM Airlines1;  
+
+SELECT CONCAT(plane_name,Origin,Destination,No_of_seats,Price) from Airlines1;
+
+  Update Airlines1 SET plane_name = 'Indigo   ' where id = 1;
+Update Airlines1 SET plane_name = '  Spicejet   ' where id = 2;
+Update Airlines1 SET plane_name = ' Vistara   ' where id = 3;
+
+
+  SELECT plane_name,LENGTH(plane_name) from Airlines1;
+
+  LTRIM: Left Remove
+
+  '  INDIA    '
+
+  SELECT LTRIM(plane_name) from Airlines1;
+  CREATE TABLE BANK(id int, BankName varchar(20), date datetime);
+
+  SELECT * FROM bank;
+
+  INSERT INTO bank values(2,'   HDFC   ', '2023-12-01 01:30:23'),
+  (3,'AXIS   ', '2023-12-01 08:30:23'),
+  (4,' ICICI   ', '2023-12-01 07:30:23'),
+  (5,'SBM', '2023-12-01 06:30:23'),
+  (6,'UCO', '2023-12-01 05:30:23'),
+  (7,' BOB  ', '2023-12-01 03:30:23'),
+  (8,'   IDFC   ', '2023-12-01 02:30:23');
+
+  SELECT LTRIM(b_name) from bank;
+
+
+  RTRIM: Right Remove.
+
+  SELECT RTRIM(BankName) from bank;
+
+  SELECT LTRIM(RTRIM(BankName)) from bank;
+
+  AGGREGATE Functions:
+
+  1) COUNT:
+
+  SELECT * FROM Airlines1;
+
+  SELECT COUNT(*) as no_of_data FROM Airlines1;
+
+  SELECT COUNT(Destination) from Airlines1;
+
+  SUM:
+
+  SELECT SUM(Price) FROM Airlines1;
+
+  SELECT SUM(price) from Airlines1 WHERE id between 1 and 5;
+
+  SELECT SUM(price) from Airlines1 WHERE id >5;
+
+  MAX:
+
+  SELECT MAX(price) from Airlines1;
+
+  MIN: 
+
+  SELECT MIN(price) from Airlines1;
+
+  AVG:
+
+  SUM OF COLUMN / no of data.
+
+  SELECT AVG(price) from Airlines1;
+
+  DECIMAL:
+
+  CREATE TABLE gold(id int, g_type varchar(20), 
+  cost decimal(5,2));
+
+  SELECT * FROM gold;
+
+  INSERT INTO gold values(1,'KDM', 300.50);
+    INSERT INTO gold values(2,'916', 200.50);
+  INSERT INTO gold values(3,'roldgold', 500.50);
+  INSERT INTO gold values(4,'umagold', 300.50);
+
+TCL: Transaction Control Language   
+1) Commit:
+2) Rollback
+
+Rollback;
+
+commit;
+
+update gold set g_type = '916';
+
+select * from gold;
+
+drop table gold;
+
+
+  Rollback;
+
+  commit;
+Truncate table gold;  
+
+delete from gold where id in(1,3);  
+
+rollback;
+
+
+CREATE TABLE Electronics(id int,name varchar(20), Date datetime, created_at timestamp,price decimal(5,2));
+SELECT * FROM Electronics;
+INSERT INTO Electronics values(1,"Mobile","2023-12-01 03:32:01", now(),799.89);
+INSERT INTO Electronics values(2,"Laptop","2021-01-21 4:45:12", now(),999.99);
+INSERT INTO Electronics values(3,"Earbuds","2017-02-22 12:32:41", now(),456.76);
+INSERT INTO Electronics values(4,"Charger","2019-05-28 10:37:26", now(),127.23);
+INSERT INTO Electronics values(5,"TV","2007-03-22 08:52:41", now(),899.99);
+INSERT INTO Electronics values(6,"HomeTheatre","2012-12-31 11:12:38", now(),849.21);
+SELECT * FROM Electronics;
+SELECT LOWER(name) from Electronics;
+SELECT UPPER(name) from Electronics;
+
+SELECT CONCAT(id,name,date) FROM Electronics;
+UPDATE Electronics SET name="  Earbuds" WHERE id=3;
+UPDATE Electronics SET name="Charger " WHERE id=4;
+
+SELECT name,LTRIM(name) FROM Electronics;
+SELECT name,RTRIM(name) FROM Electronics;
+
+SELECT count(*) FROM Electronics;
+SELECT SUM(price) FROM Electronics;
+SELECT MAX(price) FROM Electronics;
+SELECT MIN(price) FROM Electronics;
+SELECT AVG(price) FROM Electronics;
+
+SELECT * FROM olympic_games1;
+SELECT LOWER(name) from olympic_games1;
+SELECT UPPER(name) from olympic_games1;
+
+SELECT CONCAT(id,sport,country) FROM olympic_games1;
+UPDATE olympic_games1 SET country="  india" WHERE id=1;
+UPDATE olympic_games1 SET country="England " WHERE id=5;
+
+SELECT name,LTRIM(name) FROM olympic_games1;
+SELECT name,RTRIM(name) FROM olympic_games1;
+
+SELECT count(*) FROM olympic_games1;
+SELECT SUM(age) FROM olympic_games1;
+SELECT MAX(age) FROM olympic_games1;
+SELECT MIN(age) FROM olympic_games1;
+SELECT AVG(age) FROM olympic_games1;
+
+SELECT * FROM airlines;
+SELECT LOWER(plane_name) from airlines1;
+SELECT UPPER(plane_name) from airlines1;
+
+SELECT CONCAT(id,plane_name,destination) FROM airlines1;
+UPDATE airlines1 SET origin="  Banglore" WHERE id=1;
+UPDATE airlines1 SET origin="Hyderabad " WHERE id=3;
+
+SELECT plane_name,LTRIM(plane_name) FROM airlines1;
+SELECT origin,RTRIM(origin) FROM airlines1;
+
+SELECT count(*) FROM airlines1;
+SELECT MAX(price) FROM airlines1;
+SELECT MIN(price) FROM airlines1;
+SELECT AVG(price) FROM airlines1;
